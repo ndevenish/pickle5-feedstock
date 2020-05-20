@@ -1,5 +1,5 @@
 {% set name = "pickle5" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d6b181805c6d7bde1d2932429385d7ff5eb1eb6bb8e596d5bd646c39768686a2
+  sha256: f8ad2c9f4dc6cb52db232949c26c9cd865a7e624edb270101bede142c332858c
 
 build:
   number: 0
@@ -33,7 +33,7 @@ about:
   home: https://github.com/pitrou/pickle5-backport
   license: PSF 2
   license_file: LICENSE
-  summary: "Experimental backport of the pickle 5 protocol (PEP 574)"
+  summary: Experimental backport of the pickle 5 protocol (PEP 574)
 
 extra:
   recipe-maintainers:
