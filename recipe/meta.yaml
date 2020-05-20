@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/pitrou/pickle5-backport
-  license: PSF 2
+  license: PSF-2.0
   license_file: LICENSE
   summary: Experimental backport of the pickle 5 protocol (PEP 574)
 
