@@ -3,7 +3,7 @@ About pickle5
 
 Home: https://github.com/pitrou/pickle5-backport
 
-Package license: PSF 2
+Package license: PSF-2.0
 
 Feedstock license: BSD 3-Clause
 
