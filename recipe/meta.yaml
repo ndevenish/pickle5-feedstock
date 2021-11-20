@@ -1,5 +1,5 @@
 {% set name = "pickle5" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e013be68ba7dde1de5a8dbcc241f201dab1126e326715916ce4a26c27919ffc
+  sha256: 80143d4e4ea9d6cd70e841af8745dbc4d50adef5adf99e725d240bcb92e6f1e8
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py < 35 or py > 37 or python_impl == "pypy"]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
