@@ -10,9 +10,10 @@ source:
   sha256: 80143d4e4ea9d6cd70e841af8745dbc4d50adef5adf99e725d240bcb92e6f1e8
 
 build:
-  number: 0
-  skip: true  # [py < 35 or py > 37 or python_impl == "pypy"]
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  skip: true  # [py < 35 or python_impl == "pypy"]
+  script: {{ PYTHON }} --version  # [py>=38]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [py<38]
 
 requirements:
   build:
@@ -25,9 +26,9 @@ requirements:
 
 test:
   imports:
-    - pickle5
+    - pickle5  # [py<38]
   commands:
-    - python -m pickle5.test.test_pickle
+    - python -m pickle5.test.test_pickle  # [py<38]
 
 about:
   home: https://github.com/pitrou/pickle5-backport
